@@ -1,0 +1,19 @@
+query GetOnePost($_id:String!){
+  getOnePost(_id:$_id){
+     _id
+      title
+      text
+    	userId
+      createdAt
+      categoryId
+      imageURL
+      points
+      voteStatus
+      user{
+        _id
+        username
+        email
+        posts
+      }
+  }
+}

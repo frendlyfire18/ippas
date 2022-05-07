@@ -1,0 +1,3 @@
+mutation UnVote($postId:String!){
+	unvote(postId:$postId)
+}

@@ -1,0 +1,21 @@
+query GetAllPostsByNameQuery($_id: String, $limit: Int!,$name:String) {
+  getPostsByName(_id: $_id, limit: $limit,name:$name) {
+    posts {
+      _id
+      title
+      text
+        userId
+      createdAt
+      imageURL
+      categoryId
+      points
+      voteStatus
+      user{
+        _id
+        username
+        email
+      }
+    }
+    hasMore
+  }
+}

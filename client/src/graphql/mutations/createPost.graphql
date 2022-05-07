@@ -1,0 +1,15 @@
+mutation CreatePost($title:String!,$text:String!,$categoryId:String!,$imageUrl:String!){
+  createPost(title:$title,text:$text,categoryId:$categoryId,imageUrl:$imageUrl){
+    _id
+        title
+        text
+        createdAt
+        points
+        categoryId
+        imageURL
+        user{
+          _id
+          username
+        }
+  }
+}

@@ -1,0 +1,17 @@
+mutation UpdatePost($_id:String!,$title:String!,$text:String!,$categoryId:String!,$imageURL:String!){
+  updatePost(_id:$_id,text:$text,title:$title,categoryId:$categoryId,imageURL:$imageURL){
+    _id
+      title
+      text
+    	userId
+      createdAt
+      categoryId
+      points
+      voteStatus
+      user{
+        _id
+        username
+        email
+      }
+  }
+}

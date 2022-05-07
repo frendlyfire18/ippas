@@ -1,0 +1,11 @@
+mutation Authorisation($usernameORemail:String!,$password:String!){
+  authorisation(options:{usernameORemail:$usernameORemail,password:$password}){
+    user{
+      ...RegularUser
+    }
+    error{
+      field
+      message
+    }
+  }
+}
